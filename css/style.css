@@ -10,6 +10,9 @@ header{
     .navbar__center{
         display: none;
     }
+    .navbar__dropdown{
+        display: block;
+    }
 }
 
 .navbar {
@@ -38,6 +41,10 @@ header{
   
 .navbar__right a:last-child {
     margin-right: 50px;
+}
+
+.navbar__dropdown{
+    display: none;
 }
 
 .rec, .square, .smallsquare{

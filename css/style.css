@@ -1,17 +1,56 @@
 header{
+    width: 100%;
     background-color: rgb(107, 34, 56);
     height: 50px;
 }
+/* navbar */
+@media only screen and (min-width:700px) {
+    .navbar__dropdown{
+        display: none;
+    }
+    .navbar__right a:last-child {
+        display: inline-block;
+        margin-right: 50px;
+    }
+}
 
 @media only screen and (max-width:700px) {
-    .navbar__right{
+    .navbar__right, .navbar__center{
         display: none;
     }
-    .navbar__center{
-        display: none;
+    .navbar__dropbtn{
+        background-color: rgb(107, 34, 56);
+        color: white;
+        padding: 13px;
+        font-size: 15px;
+        border: none;
+        cursor: pointer;
     }
     .navbar__dropdown{
+        position: relative;
+        display: inline-block;
+        margin-right: 120px;
+    }
+    .navbar__dropdown__list{
+        display: none;
+        position: absolute;
+        background-color: pink;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0);
+        z-index: 1;
+    }
+    .navbar__dropdown__list a{
+        color: white;
         display: block;
+    }
+    .navbar__dropdown__list a:hover{
+        background-color: rgb(249, 142, 159);
+    }
+    .navbar__dropdown:hover .navbar__dropdown__list{
+        display: block;
+    }
+    .navbar__dropdown:hover .navbar__dropbtn{
+        background-color: rgb(249, 142, 159);
     }
 }
 
@@ -23,6 +62,11 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 50px;
+} 
+
+.navbar__left {
+    display: inline-block;
+    margin-left: 50px;
 }
 
 .navbar a{
@@ -32,25 +76,14 @@ header{
 }
 
 .navbar a:hover{
-    background-color: rgb(195, 124, 136);
-}
-
-.navbar__left {
-    margin-left: 50px;
-}
-  
-.navbar__right a:last-child {
-    margin-right: 50px;
-}
-
-.navbar__dropdown{
-    display: none;
+    background-color: rgb(249, 142, 159);
 }
 
 .rec, .square, .smallsquare{
     background-color: #D9D9D9;
 }
 
+/* section1 */
 .section1{
     width: 95%;
     margin: auto;
@@ -81,6 +114,7 @@ header{
     background-color: red;
 }
 
+/* section2 */
 .section2{
     width: 95%;
     margin: auto;
@@ -106,6 +140,7 @@ header{
     height: 30px;
 }
 
+/* section3 */
 .section3__line1, .section3__line2, .section3__line3{
 
     display: flex;
@@ -120,7 +155,7 @@ header{
     width: 23%;
     padding-bottom: 23%;
 }
-
+/* section4 */
 .section4 .smallsquare{
     width: 40px;
     height: 40px;
